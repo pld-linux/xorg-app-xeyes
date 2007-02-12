@@ -1,5 +1,5 @@
 Summary:	xeyes application
-Summary(pl.UTF-8):   Aplikacja xeyes
+Summary(pl.UTF-8):	Aplikacja xeyes
 Name:		xorg-app-xeyes
 Version:	1.0.1
 Release:	1
