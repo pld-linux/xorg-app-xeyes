@@ -2,7 +2,7 @@ Summary:	xeyes application
 Summary(pl.UTF-8):	Aplikacja xeyes
 Name:		xorg-app-xeyes
 Version:	1.0.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xeyes-%{version}.tar.bz2
