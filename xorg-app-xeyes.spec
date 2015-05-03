@@ -2,7 +2,7 @@ Summary:	xeyes application - a follow the mouse X demo
 Summary(pl.UTF-8):	Aplikacja xeyes - program demonstracyjny dla X obrazujący śledzenie myszy
 Name:		xorg-app-xeyes
 Version:	1.1.1
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xeyes-%{version}.tar.bz2
@@ -59,4 +59,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/xeyes
 %{_desktopdir}/xeyes.desktop
 %{_pixmapsdir}/xeyes.png
-%{_mandir}/man1/xeyes.1x*
+%{_mandir}/man1/xeyes.1*
