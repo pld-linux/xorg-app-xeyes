@@ -1,24 +1,33 @@
 Summary:	xeyes application - a follow the mouse X demo
 Summary(pl.UTF-8):	Aplikacja xeyes - program demonstracyjny dla X obrazujący śledzenie myszy
 Name:		xorg-app-xeyes
-Version:	1.1.2
+Version:	1.2.0
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	https://xorg.freedesktop.org/releases/individual/app/xeyes-%{version}.tar.bz2
-# Source0-md5:	6f0543ec84283df5743eeafc173bea4a
+# Source0-md5:	93b707adb44ac82dbf8ac0ac29004938
 Source1:	xeyes.desktop
 Source2:	xeyes.png
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
+BuildRequires:	libxcb-devel >= 1.9
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	pkgconfig(x11-xcb)
+BuildRequires:	pkgconfig(xcb-damage)
+BuildRequires:	pkgconfig(xcb-present) >= 1.9
+BuildRequires:	pkgconfig(xcb-xfixes)
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXi-devel >= 1.7
 BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-lib-libXrender-devel >= 0.4
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.17
 BuildRequires:	xorg-util-util-macros >= 1.8
+Requires:	libxcb >= 1.9
+Requires:	xorg-lib-libXi >= 1.7
 Requires:	xorg-lib-libXrender >= 0.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -56,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %attr(755,root,root) %{_bindir}/xeyes
 %{_desktopdir}/xeyes.desktop
 %{_pixmapsdir}/xeyes.png
