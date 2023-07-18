@@ -1,12 +1,12 @@
 Summary:	xeyes application - a follow the mouse X demo
 Summary(pl.UTF-8):	Aplikacja xeyes - program demonstracyjny dla X obrazujący śledzenie myszy
 Name:		xorg-app-xeyes
-Version:	1.2.0
+Version:	1.3.0
 Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	https://xorg.freedesktop.org/releases/individual/app/xeyes-%{version}.tar.bz2
-# Source0-md5:	93b707adb44ac82dbf8ac0ac29004938
+Source0:	https://xorg.freedesktop.org/releases/individual/app/xeyes-%{version}.tar.xz
+# Source0-md5:	277154a21954678ff0bff0d696278c08
 Source1:	xeyes.desktop
 Source2:	xeyes.png
 URL:		https://xorg.freedesktop.org/
@@ -18,6 +18,7 @@ BuildRequires:	pkgconfig(x11-xcb)
 BuildRequires:	pkgconfig(xcb-damage)
 BuildRequires:	pkgconfig(xcb-present) >= 1.9
 BuildRequires:	pkgconfig(xcb-xfixes)
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXi-devel >= 1.7
@@ -26,6 +27,7 @@ BuildRequires:	xorg-lib-libXrender-devel >= 0.4
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.17
 BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xz
 Requires:	libxcb >= 1.9
 Requires:	xorg-lib-libXi >= 1.7
 Requires:	xorg-lib-libXrender >= 0.4
